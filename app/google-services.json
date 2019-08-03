@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "727017753825",
+    "firebase_url": "https://muralleucotron.firebaseio.com",
+    "project_id": "muralleucotron",
+    "storage_bucket": "muralleucotron.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:727017753825:android:c1e0db3695a7ead0",
+        "android_client_info": {
+          "package_name": "com.example.muralleucotron"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "727017753825-m71sjdhnk755s6mc8q2q0ucvbid1cl9j.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.muralleucotron",
+            "certificate_hash": "a1fad3a14aca1984d9794d8c7e557a6cb2ba33eb"
+          }
+        },
+        {
+          "client_id": "727017753825-ch4mas2s8cqauc4kvts06tdc848601i2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA_1o4q2mn0JnCR-e-hjlBzLcGCnY9HGP8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "727017753825-ch4mas2s8cqauc4kvts06tdc848601i2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
