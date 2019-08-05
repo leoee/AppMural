@@ -10,10 +10,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity
-            android:name=".example"
-            android:label="@string/title_activity_example"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity android:name=".BuscaUsuarioActivity"></activity>
         <activity android:name=".DetalheAtividadeActivity" />
         <activity android:name=".AddUsuarioParaAtividade" />
         <activity android:name=".CadastrarAtividadeActivity" />

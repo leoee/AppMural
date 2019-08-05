@@ -17,11 +17,13 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.InputType;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
@@ -51,7 +53,9 @@ public class MenuActivity extends AppCompatActivity {
     int mPosition;
     Boolean mSortable;
     String mDragString;
+    int retorno = 0;
     Atividade e;
+    String m_Text = "";
     public static final int ATT = 3;
     @SuppressLint("ClickableViewAccessibility")
     @Override
@@ -159,6 +163,7 @@ public class MenuActivity extends AppCompatActivity {
             @Override
             public void onRefresh() {
                 setTitle("Lista de Atividades");
+                retorno = 0;
                 lista = fb.getLista();
                 adapter.attLista(lista);
                 if(aux.getPermissao().equals("0"))
@@ -194,28 +199,32 @@ public class MenuActivity extends AppCompatActivity {
                         Intent intent = new Intent(getApplicationContext(), CadastrarUsuarioActivity.class);
                         startActivity(intent);
                     }
-                }
-                else if(id == R.id.cadastrarAtividade){
+                } else if (id == R.id.meuPerfil) {
+                    Bundle bundle = new Bundle();
+                    bundle.putString("usuario", usuario);
+                    Intent intent = new Intent(getApplicationContext(), BuscaUsuarioActivity.class);
+                    intent.putExtras(bundle);
+                    startActivity(intent);
+                } else if (id == R.id.cadastrarAtividade) {
                     Bundle bundle = new Bundle();
                     bundle.putString("usuario", usuario);
                     Intent intent = new Intent(getApplicationContext(), CadastrarAtividadeActivity.class);
                     intent.putExtras(bundle);
                     startActivityForResult(intent, ATT);
-                }
-                else if(id == R.id.doing){
+                } else if (id == R.id.doing) {
+                    retorno = 4;
                     lista = fb.getLista();
                     adapter.attLista(lista);
                     adapter.getFilter().filter("minha" + aux.getNome());
                     dl.closeDrawers();
-                }
-                else if (id == R.id.done) {
+                } else if (id == R.id.done) {
+                    retorno = 5;
                     lista = fb.getLista();
                     adapter.attLista(lista);
-                    adapter.getFilter().filter("doing" + aux.getNome() + "(" + usuario + ")");
+                    adapter.getFilter().filter("doing" + aux.getNome() + " (" + usuario + ")");
                     dl.closeDrawers();
 
-                }
-                else if(id == R.id.sair){
+                } else if (id == R.id.sair) {
                     finish();
                     Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                     startActivity(intent);
@@ -265,7 +274,18 @@ public class MenuActivity extends AppCompatActivity {
         lista = fb.getLista();
         adapter.attLista(lista);
         if(aux.getPermissao().equals("0"))
-            adapter.getFilter().filter(aux.getSetor());
+            if(retorno == 0)
+                adapter.getFilter().filter(aux.getSetor());
+            else if(retorno == 1)
+                adapter.getFilter().filter("hw");
+            else if(retorno == 2)
+                adapter.getFilter().filter("sf");
+            else if(retorno == 3)
+                adapter.getFilter().filter("outros");
+            else if(retorno == 4)
+                adapter.getFilter().filter("minha" + aux.getNome());
+            else if(retorno == 5)
+                adapter.getFilter().filter("doing" + aux.getNome() + " (" + usuario + ")");
         adapter.notifyDataSetChanged();
         listView.invalidateViews();
         listView.refreshDrawableState();
@@ -281,17 +301,20 @@ public class MenuActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
         if (id == R.id.hardware) {
+            retorno = 1;
             lista = fb.getLista();
             adapter.attLista(lista);
             adapter.getFilter().filter("hw");
         }
         else if(id == R.id.software){
+            retorno = 2;
             lista = fb.getLista();
             adapter.attLista(lista);
             adapter.getFilter().filter("sf");
 
         }
         else if(id == R.id.Outros){
+            retorno = 3;
             lista = fb.getLista();
             adapter.attLista(lista);
             adapter.getFilter().filter("outros");

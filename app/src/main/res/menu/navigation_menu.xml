@@ -12,8 +12,8 @@
             </item>
             <item
                 android:id="@+id/meuPerfil"
-                android:icon="@drawable/ic_build_black_24dp"
-                android:title="Editar perfil de usuário">
+                android:icon="@drawable/ic_search_black_24dp"
+                android:title="Buscar">
             </item>
         </menu>
     </item>

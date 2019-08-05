@@ -77,6 +77,7 @@ public class DetalheAtividadeActivity extends AppCompatActivity {
                 break;
             }
         }
+        System.out.println(entrou);
         if(aux.getPermissao().equals("0")) {
             if (atividade.getProgresso() == 100 || !atividade.getSetor().contains(aux.getSetor())) {
                 btnMenos.setVisibility(View.INVISIBLE);
@@ -92,7 +93,8 @@ public class DetalheAtividadeActivity extends AppCompatActivity {
                 btnMais.setVisibility(View.VISIBLE);
             }
         }
-        if(entrou){
+        if(!atividade.getSetor().contains(aux.getSenha()) && entrou){
+            btnAdd.setVisibility(View.INVISIBLE);
             btnMenos.setVisibility(View.VISIBLE);
             btnMais.setVisibility(View.VISIBLE);
         }
@@ -112,7 +114,7 @@ public class DetalheAtividadeActivity extends AppCompatActivity {
         if(usuarios.get(0).equals("Sem Usuários")){
             usuarios.clear();
         }
-        usuarios.add(aux.getNome() + "(" + nomeUsuario + ")");
+        usuarios.add(aux.getNome() + " (" + nomeUsuario + ")");
         atividade.setUsuarios(usuarios);
         fb.addAtividade(atividade);
         fb.atualizaLista();
