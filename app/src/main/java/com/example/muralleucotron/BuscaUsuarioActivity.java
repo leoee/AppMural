@@ -54,12 +54,9 @@ public class BuscaUsuarioActivity extends AppCompatActivity {
         hw = findViewById(R.id.checkBox2Edicao);
         outros = findViewById(R.id.checkBox3Edicao);
 
-        System.out.println(user.getPermissao());
-        if(user.getPermissao().equals("0")) {
-            sf.setEnabled(false);
-            hw.setEnabled(false);
-            outros.setEnabled(false);
-        }
+        sf.setEnabled(false);
+        hw.setEnabled(false);
+        outros.setEnabled(false);
 
 
         sf.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
@@ -118,7 +115,7 @@ public class BuscaUsuarioActivity extends AppCompatActivity {
         toast.show();
     }
 
-    public void btnEditaNome(View view) {
+    /*public void btnEditaNome(View view) {
         if(auxiliar == null){
             notifica("Não é possível altera o nome!");
         }
@@ -152,7 +149,7 @@ public class BuscaUsuarioActivity extends AppCompatActivity {
         else{
             notifica("Você não permissão para alterar.");
         }
-    }
+    }*/
 
     public void clickResetSenha(View view) {
         if(auxiliar == null){
@@ -175,6 +172,15 @@ public class BuscaUsuarioActivity extends AppCompatActivity {
 
                         }
                     }).show();
+        }
+    }
+
+    public void btnApagarUsuario(View view) {
+        if(auxiliar == null){
+            notifica("Escolha um usuário para apagar.");
+        }
+        else{
+
         }
     }
 }

@@ -123,8 +123,7 @@ public class FirebaseDAO {
         });
 
     }
-    public void removeViagem(final String valor){
-        databaseReference.child("Viagens").child(valor).removeValue();
+    public void removeAtividade(final String valor){
         for(int i = 0; i < atividades.size(); i++){
             if(atividades.get(i).getTitulo().equals(valor))
                 atividades.remove(i);

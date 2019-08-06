@@ -99,15 +99,6 @@
                 android:hint="Nome"
                 android:inputType="text" />
 
-            <ImageView
-                android:id="@+id/editNome"
-                android:layout_width="wrap_content"
-                android:layout_height="fill_parent"
-                android:layout_marginRight="5dp"
-                android:clickable="true"
-                android:onClick="btnEditaNome"
-                android:layout_weight="2"
-                app:srcCompat="@android:drawable/ic_menu_edit" />
         </LinearLayout>
 
         <LinearLayout
@@ -131,15 +122,6 @@
                 android:hint="Sobrenome"
                 android:inputType="text" />
 
-            <ImageView
-                android:id="@+id/editSobrenome"
-                android:layout_width="wrap_content"
-                android:layout_height="fill_parent"
-                android:layout_marginRight="5dp"
-                android:layout_weight="2"
-                android:clickable="true"
-                android:onClick="btnEditaSobrenome"
-                app:srcCompat="@android:drawable/ic_menu_edit" />
         </LinearLayout>
 
     </LinearLayout>
@@ -199,15 +181,6 @@
                 android:hint="Cargo"
                 android:inputType="text" />
 
-            <ImageView
-                android:id="@+id/imageView4"
-                android:layout_width="wrap_content"
-                android:layout_height="fill_parent"
-                android:clickable="true"
-                android:onClick="btnEditaCargo"
-                android:layout_marginRight="5dp"
-                android:layout_weight="2"
-                app:srcCompat="@android:drawable/ic_menu_edit" />
         </LinearLayout>
 
         <TextView
@@ -260,15 +233,7 @@
         android:layout_weight="5"
         android:layout_marginTop="15dp"
         android:layout_gravity="center"
-        android:orientation="vertical">
-
-        <Button
-            android:id="@+id/btnFinalizarEdicao"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/borda_arredondada"
-            android:text="Finalizar" />
-    </LinearLayout>
+        android:orientation="vertical"/>
 
 
     <LinearLayout

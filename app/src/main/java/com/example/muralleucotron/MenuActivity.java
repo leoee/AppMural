@@ -113,7 +113,7 @@ public class MenuActivity extends AppCompatActivity {
                             {
                                 @Override
                                 public void onClick(DialogInterface dialog, int which) {
-                                    fb.removeViagem(adapter.getAtividade(index).getTitulo());
+                                    fb.removeAtividade(adapter.getAtividade(index).getTitulo());
                                     lista = fb.getLista();
                                     adapter.attLista(lista);
                                     adapter.notifyDataSetChanged();
@@ -137,7 +137,7 @@ public class MenuActivity extends AppCompatActivity {
                                 {
                                     @Override
                                     public void onClick(DialogInterface dialog, int which) {
-                                        fb.removeViagem(adapter.getAtividade(index).getTitulo());
+                                        fb.removeAtividade(adapter.getAtividade(index).getTitulo());
                                         lista = fb.getLista();
                                         adapter.attLista(lista);
                                         adapter.getFilter().filter(aux.getSetor());
