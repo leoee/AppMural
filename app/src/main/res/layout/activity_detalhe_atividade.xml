@@ -5,7 +5,7 @@
     android:layout_width="fill_parent"
     android:orientation="vertical"
     android:layout_height="fill_parent"
-    android:background="#2196F3"
+    android:background="#FFFFFF"
     android:weightSum="100"
     tools:context=".DetalheAtividadeActivity">
 
@@ -21,7 +21,7 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:text="Título"
-            android:textSize="20dp"
+            android:textSize="25dp"
             android:textStyle="bold" />
     </LinearLayout>
 
@@ -69,7 +69,7 @@
             android:layout_weight="1"
             android:gravity="center"
             android:textStyle="bold"
-            android:textSize="20dp"
+            android:textSize="25dp"
             android:text="Equipe" />
     </LinearLayout>
 
@@ -114,6 +114,9 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_weight="5"
+            android:layout_marginLeft="10dp"
+            android:textStyle="bold"
+            android:textSize="20dp"
             android:text="Data Início:" />
 
         <TextView
@@ -138,6 +141,9 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_weight="5"
+            android:textStyle="bold"
+            android:layout_marginLeft="10dp"
+            android:textSize="20dp"
             android:text="Data Término:" />
 
         <TextView
@@ -161,6 +167,9 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_weight="5"
+            android:layout_marginLeft="10dp"
+            android:textStyle="bold"
+            android:textSize="20dp"
             android:text="Criador:" />
 
         <TextView
@@ -211,12 +220,12 @@
                 android:layout_gravity="center"
                 android:layout_marginLeft="10dp"
                 android:layout_weight="20"
-                app:srcCompat="@drawable/ic_exposure_neg_1_black_24dp"
-                app:backgroundTint="#FFFFFF"
-                android:onClick="btnMenos"
-                android:clickable="true"
                 android:background="@drawable/borda_arredondada"
-                tools:ignore="VectorDrawableCompat"/>
+                android:clickable="true"
+                android:onClick="btnMenos"
+                app:backgroundTint="#2196F3"
+                app:srcCompat="@drawable/ic_exposure_neg_1_black_24dp"
+                tools:ignore="VectorDrawableCompat" />
 
 
             <ProgressBar
@@ -236,13 +245,13 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginLeft="10dp"
-                android:clickable="true"
                 android:layout_weight="20"
-                app:srcCompat="@drawable/ic_exposure_plus_1_black_24dp"
-                app:backgroundTint="#FFFFFF"
-                android:onClick="btnMais"
                 android:background="@drawable/borda_arredondada"
-                tools:ignore="VectorDrawableCompat"/>
+                android:clickable="true"
+                android:onClick="btnMais"
+                app:backgroundTint="#2196F3"
+                app:srcCompat="@drawable/ic_exposure_plus_1_black_24dp"
+                tools:ignore="VectorDrawableCompat" />
         </LinearLayout>
 
     </LinearLayout>
@@ -257,11 +266,11 @@
             android:id="@+id/btnAddNaAtividade"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:clickable="true"
             android:layout_gravity="center"
-            app:srcCompat="@drawable/ic_person_add_black_24dp"
-            app:backgroundTint="#FFFFFF"
+            android:clickable="true"
             android:onClick="btnAddNaAtividade"
+            app:backgroundTint="#2196F3"
+            app:srcCompat="@drawable/ic_person_add_black_24dp"
             tools:ignore="VectorDrawableCompat" />
     </LinearLayout>
 

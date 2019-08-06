@@ -71,7 +71,7 @@ public class Custom_List extends BaseAdapter implements Filterable {
         if(atividades.get(position).getProgresso() == 100)
             view.setBackgroundColor(Color.GREEN);
         else
-            view.setBackgroundColor(Color.YELLOW);
+            view.setBackgroundColor(Color.WHITE);
         view.setMinimumHeight(600);
         TextView txtTitulo = view.findViewById(R.id.textTituloList);
         TextView data = view.findViewById(R.id.data);
